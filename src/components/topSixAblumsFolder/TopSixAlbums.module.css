@@ -1,0 +1,56 @@
+.topAlbumTitle {
+    color: var(--light, #EFEEE0);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    padding: 2rem 0.5rem;
+    line-height: 120%; /* 1.5rem */
+}
+
+.sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    justify-items: center;
+}
+
+.albumCover {
+    min-height: 8rem;
+    min-width: 8rem;
+    width: 90%;
+    max-width: 15rem;
+    max-height: 15rem;
+    object-fit: fill;
+    border-radius: 1.5rem;
+}
+
+.albumCardContainer {
+    display: flex;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.albumInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.31rem;
+    padding: .5rem;
+}
+
+.albumName {
+    color: #FFF;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.artistName {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+                  

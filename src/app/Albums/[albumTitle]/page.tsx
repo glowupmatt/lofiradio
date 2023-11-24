@@ -20,7 +20,7 @@ const page = (props: Props) => {
     const artist = selectedAlbum[0].artist;
     const songs = selectedAlbum[0].songs;
   return (
-    <main className={SelectedAlbumStyles.mainContainer }>
+    <main className={SelectedAlbumStyles.mainContainer}>
         <HomePageBody>
             <div 
             className={SelectedAlbumStyles.selectedAlbumMain} 

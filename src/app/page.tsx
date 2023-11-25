@@ -8,6 +8,7 @@ import LandingPage from '@/components/landingPageFolder/LandingPage';
 import AlbumDisplayPage from '@/components/albumPageFolder/AlbumDisplayPage';
 import SelectSongPage from '@/components/albumPageFolder/SelectAlbumPage';
 import AllAlbums from '@/components/albumPageFolder/AllAlbums';
+import SelectedAlbumFile from "@/components/albumPageFolder/selectedAlbum/SelectedAlbumFile";
 
 export default function Home() {
   const {
@@ -19,7 +20,7 @@ export default function Home() {
     <HomePageBody>
       {selectedPage === 'homePage' ? <LandingPage /> 
       : selectedPage === 'albumPage' ? <SelectSongPage />
-      : selectedPage === 'songPage' ? <SelectSongPage />
+      : selectedPage === 'songPage' ? <SelectedAlbumFile />
       : <LandingPage />}
     </HomePageBody>
    </main>

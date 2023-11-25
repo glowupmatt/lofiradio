@@ -1,6 +1,5 @@
 import React from 'react'
 import albumsStyles from "./AllAlbums.module.css"
-import Link from 'next/link';
 
 type Props = {
     getAlbums: {
@@ -16,7 +15,7 @@ const AllAlbums = (props: Props) => {
     <div className={albumsStyles.albumList}>
         {getAlbums.map((album, index) => {
             return (
-                <Link href={`/Albums/${album.albumName}`} className={albumsStyles.albumCard} key={index}>
+                <div className={albumsStyles.albumCard} key={index}>
                     <div className={albumsStyles.overlay}></div>
                     <img 
                     src={album.cover} 
@@ -26,7 +25,7 @@ const AllAlbums = (props: Props) => {
                         <h3 className={albumsStyles.albumTitle}>{album.albumName}</h3>
                         <h4 className={albumsStyles.artistName}>{album.artist}</h4>
                     </div>
-                </Link>
+                </div>
             )
         })}
     </div>

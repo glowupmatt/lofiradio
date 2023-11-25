@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import NavBar from '../navBarFolder/NavBar'
+import NavBar from './navBarFolder/NavBar'
 import childrenStyles from './HomePageBody.module.css'
 import { useState } from 'react'
 

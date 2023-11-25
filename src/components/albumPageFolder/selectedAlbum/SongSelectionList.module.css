@@ -1,0 +1,35 @@
+.songContainer {
+    display: flex;
+    background: rgba(51, 55, 59, 0.37);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    max-height: 3.5rem;
+    padding: 1rem;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.songName {
+    color: #FFF;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+}
+
+.songCredits {
+    color: #FFF;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+}
+
+.songInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1.25rem;
+    color: white;
+}

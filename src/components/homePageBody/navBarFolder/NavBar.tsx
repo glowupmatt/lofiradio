@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { DataContext } from "@/context/AppContext";
 import Image from 'next/image'
 import header from './NavBarStyles.module.css'
 import DragHandleIcon from '@mui/icons-material/DragHandle';
@@ -14,9 +15,13 @@ function NavBar({navOpen, setNavOpen}: Props) {
   const onClickHandler = () => {
     setNavOpen((prev) => !prev)
   }
+  const {
+    selectedPage,
+    setSelectedPage,
+  } = useContext(DataContext)
   return (
     <nav className={header.navBar}>
-      <Link href={"/"}>
+      <div onClick={() => setSelectedPage("homePage")}>
         <Image 
           src={"/MusicPlayerAssests/Lofi-Radio-logo.svg"}
           alt='Lofi Radio Logo'
@@ -24,7 +29,7 @@ function NavBar({navOpen, setNavOpen}: Props) {
           height={100}
           className={header.logo}
         />
-      </Link>
+      </div>
       <div onClick={onClickHandler}>
         {navOpen ?  <CloseIcon /> : <DragHandleIcon />}
       </div>

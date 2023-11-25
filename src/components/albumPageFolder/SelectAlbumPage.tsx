@@ -5,7 +5,7 @@ import { albums } from '@/app/music'
 
 type Props = {}
 
-const page = (props: Props) => {
+const SelectSongPage = (props: Props) => {
     const getAlbums = albums.map((album) => {
         const albumCover = album.image;
         const albumName = album.title;
@@ -17,13 +17,11 @@ const page = (props: Props) => {
         }
     })
   return (
-    <main>
-        <HomePageBody>
-            <h1>ALBUMS</h1>
-            <AllAlbums getAlbums={getAlbums}/>
-        </HomePageBody>
-    </main>
+    <div>
+        <h1>ALBUMS</h1>
+        <AllAlbums getAlbums={getAlbums}/>
+    </div>
   )
 }
 
-export default page
+export default SelectSongPage

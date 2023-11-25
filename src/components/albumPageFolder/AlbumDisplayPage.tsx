@@ -10,7 +10,7 @@ type Props = {
     }
 }
 
-const page = (props: Props) => {
+const AlbumDisplayPage = (props: Props) => {
     const { params } = props;
     const selectedAlbum = albums.filter((album) => {
         return album.title === params.albumTitle.split('%20').join(' ')
@@ -25,15 +25,15 @@ const page = (props: Props) => {
             <div 
             className={SelectedAlbumStyles.selectedAlbumMain} 
             style={{  
-                background: `linear-gradient(180deg, rgba(29, 33, 35, 0.80) 0%,
+                background: `linear-gradient(180deg, rgba(29, 33, 35, 0.80) 40%,
                  rgb(11, 13, 24) 61.48%), url(${albumCover}), 
                  lightgray 50% / cover no-repeat`
             }}>
-                <SelectedAlbum />
+                <SelectedAlbum selectedAlbum={selectedAlbum}/>
             </div>
         </HomePageBody>
     </main>
   )
 }
 
-export default page
+export default AlbumDisplayPage

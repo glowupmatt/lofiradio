@@ -1,20 +1,26 @@
-import React from 'react'
-import HeroComp from '@/components/heroFolder/HeroComp'
-import HomePageBody from '@/components/homePageBody/HomePageBody'
-import TopSongsComp from '@/components/topSongsFolder/TopSongsComp'
-import TopSixAlbums from '@/components/topSixAblumsFolder/TopSixAlbums'
-import homePageDisplay from '@/app/HomePageStyles.module.css'
+'use client'
 
+import React, { useContext } from "react";
+import { DataContext } from "@/context/AppContext";
+import HomePageBody from '@/components/homePageBody/HomePageBody'
+import { albums } from "./music";
+import LandingPage from '@/components/landingPageFolder/LandingPage';
+import AlbumDisplayPage from '@/components/albumPageFolder/AlbumDisplayPage';
+import SelectSongPage from '@/components/albumPageFolder/SelectAlbumPage';
+import AllAlbums from '@/components/albumPageFolder/AllAlbums';
 
 export default function Home() {
+  const {
+    selectedPage,
+    setSelectedPage,
+  } = useContext(DataContext);
   return (
-   <main>
+    <main>
     <HomePageBody>
-      <div className={homePageDisplay.componentContainer}>
-      <HeroComp />
-      <TopSongsComp />
-      <TopSixAlbums />
-      </div>
+      {selectedPage === 'homePage' ? <LandingPage /> 
+      : selectedPage === 'albumPage' ? <SelectSongPage />
+      : selectedPage === 'songPage' ? <SelectSongPage />
+      : <LandingPage />}
     </HomePageBody>
    </main>
   )

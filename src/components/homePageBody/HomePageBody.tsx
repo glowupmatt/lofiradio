@@ -36,7 +36,7 @@ const HomePageBody = (props: Props) => {
             )
           })}</div>
         </div>
-        <div className={childrenStyles.mainBody}>{children}</div>
+        <div className={navOpen ? childrenStyles.mainBodyOpen : childrenStyles.mainBody}>{children}</div>
         <h2 className={childrenStyles.footerTitle}>© 2023 Lofi Radio</h2>
     </div>
   )

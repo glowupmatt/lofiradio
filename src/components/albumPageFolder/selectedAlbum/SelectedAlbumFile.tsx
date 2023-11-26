@@ -4,7 +4,7 @@ import SelectedAlbumStyles from '@/components/albumPageFolder/selectedAlbum/Sele
 import SongSelectionList from './SongSelectionList';
 
 type Props = {
-  selectedAlbum: {
+  selectedAlbumFilter: {
     title: string;
     artist: string;
     image: string;
@@ -21,11 +21,11 @@ type Props = {
 
 
 const SelectedAlbumFile = (props: Props) => {
-  const { selectedAlbum } = props;
-  const albumCover = selectedAlbum[0].image;
-  const albumName = selectedAlbum[0].title;
-  const artist = selectedAlbum[0].artist;
-  const songs = selectedAlbum[0].songs;
+  const { selectedAlbumFilter } = props;
+  const albumCover = selectedAlbumFilter[0].image;
+  const albumName = selectedAlbumFilter[0].title;
+  const artist = selectedAlbumFilter[0].artist;
+  const songs = selectedAlbumFilter[0].songs;
   console.log(songs)
   return (
     <section className={SelectedAlbumStyles.sectionContainer}>

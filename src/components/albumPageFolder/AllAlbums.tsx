@@ -1,4 +1,5 @@
-import React from 'react'
+import React , { useContext } from "react";
+import { DataContext } from "@/context/AppContext";
 import albumsStyles from "./AllAlbums.module.css"
 
 type Props = {
@@ -11,11 +12,18 @@ type Props = {
 
 const AllAlbums = (props: Props) => {
     const { getAlbums } = props;
+    const { setSelectedPage, setSelectedAlbum } = useContext(DataContext);
   return (
     <div className={albumsStyles.albumList}>
         {getAlbums.map((album, index) => {
             return (
-                <div className={albumsStyles.albumCard} key={index}>
+                <div 
+                onClick={() => 
+                    {setSelectedAlbum(album.albumName)
+                    setSelectedPage('songPage')
+                }} 
+                className={albumsStyles.albumCard} 
+                key={index}>
                     <div className={albumsStyles.overlay}></div>
                     <img 
                     src={album.cover} 

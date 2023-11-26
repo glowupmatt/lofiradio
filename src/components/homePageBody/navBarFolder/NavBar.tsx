@@ -16,7 +16,6 @@ function NavBar({navOpen, setNavOpen}: Props) {
     setNavOpen((prev) => !prev)
   }
   const {
-    selectedPage,
     setSelectedPage,
   } = useContext(DataContext)
   return (

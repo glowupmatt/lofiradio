@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from "@/context/AppContext";
 import { albums } from '@/app/music'
 import topSixAlbums from './TopSixAlbums.module.css'
+import Image from 'next/image'
 
 type Props = {}
 
 const TopSixAlbums = (props: Props) => {
+    const { setSelectedAlbum, setSelectedPage } = useContext(DataContext);
     const topFiveSongs = albums.map((album) => {
         const albumCover = album.image;
         const albumName = album.title;
@@ -26,9 +29,15 @@ const TopSixAlbums = (props: Props) => {
         .map((song, index) => {
             const { cover, albumName, artist } = song;
             return (
-                <div key={index} className={topSixAlbums.albumCardContainer}>
-                    <div className={topSixAlbums.songContainer}>
-                            <img 
+                <div 
+                key={index} 
+                className={topSixAlbums.albumCardContainer}
+                onClick={() => {setSelectedAlbum(albumName)
+                setSelectedPage('songPage')}}
+                >   
+                            <Image
+                            width={1080}
+                            height={1920} 
                             src={cover} 
                             alt={albumName} 
                             className={topSixAlbums.albumCover}
@@ -37,7 +46,6 @@ const TopSixAlbums = (props: Props) => {
                             <h4 className={topSixAlbums.albumName}>{albumName}</h4>
                             <h2 className={topSixAlbums.artistName}>{artist}</h2>
                         </div>
-                    </div>
                 </div>
             )
         })}

@@ -1,3 +1,12 @@
+.pageName {
+    color: var(--light, #EFEEE0);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+    padding: 1rem;
+}
+
 .albumList {
     display: flex;
     flex-direction: column;
@@ -7,11 +16,34 @@
     padding: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+    .albumList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: 1020px) {
+    .albumList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+}
+
 .albumCard {
     max-width: 22.4375rem;
     min-height: 14.625rem;
     width: 100%;
     position: relative;
+    cursor: pointer;
+}
+
+.albumCard:hover {
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
 }
 
 .overlay {

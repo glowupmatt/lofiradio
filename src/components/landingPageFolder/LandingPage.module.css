@@ -1,0 +1,19 @@
+.componentContainer {
+    padding: 1rem;
+  }
+
+@media screen and (min-width: 1020px) {
+    .componentContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .slider {
+        grid-column: 1 / span 2;
+    }
+
+    .topSixContainer {
+        grid-column: 1 / span 3;
+    }
+}

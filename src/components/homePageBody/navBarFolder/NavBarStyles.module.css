@@ -6,4 +6,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-height: 4rem;
+}
+
+.menuIcon {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .menuIcon{
+         display: none;
+        }
+
+    .logo{
+        height: 5rem;
+        width: 6rem;
+        cursor: pointer;
+    }
 }

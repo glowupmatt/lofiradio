@@ -4,6 +4,7 @@ import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
 import imageByIndex from "./ImageByIndex"
 import embla from "./EmblaCarousel.module.css"
+import Image from "next/image"
 
 type PropType = {
     slides: number[]
@@ -20,7 +21,9 @@ type PropType = {
           <div className={embla.embla__container}>
             {slides.map((_, index) => (
               <div className={embla.embla__slide} key={index}>
-                <img
+                <Image
+                width={1080}
+                height={1920}
                   className={embla.embla__slide__img}
                   src={imageByIndex(index)}
                   alt="Album Cover"

@@ -29,7 +29,9 @@ function NavBar({navOpen, setNavOpen}: Props) {
           className={header.logo}
         />
       </div>
-      <div onClick={onClickHandler}>
+      <div 
+      className={header.menuIcon}
+      onClick={onClickHandler}>
         {navOpen ?  <CloseIcon /> : <DragHandleIcon />}
       </div>
     </nav>

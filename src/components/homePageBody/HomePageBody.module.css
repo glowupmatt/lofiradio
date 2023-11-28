@@ -1,7 +1,7 @@
 .navOpen {
     overflow: hidden;
     position: absolute;
-    background: rgba(41, 41, 41, 0.507);
+    background: rgba(157, 157, 157, 0.507);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.4px);
@@ -12,6 +12,7 @@
     color: white;
 }
 
+
 .navClosed{
     display: none;
 }
@@ -19,6 +20,28 @@
 .mainBodyOpen {
     overflow: hidden;
     height: 78vh;
+}
+
+.mainBody {
+    overflow: overlay;
+}
+
+@media screen and (min-width: 1020px) {
+    .mainBodyOpen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        height: 100%;
+    }
+
+    .mainBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        height: 100%;
+    }
 }
 
 .iconContainer {

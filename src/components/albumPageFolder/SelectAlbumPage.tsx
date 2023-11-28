@@ -1,11 +1,12 @@
 import React from 'react'
 import HomePageBody from '@/components/homePageBody/HomePageBody'
 import AllAlbums from '@/components/albumPageFolder/AllAlbums'
+import AllAlbumsStyles from './AllAlbums.module.css'
 import { albums } from '@/app/music'
 
 type Props = {}
 
-const SelectSongPage = (props: Props) => {
+const SelectAlbumPage = (props: Props) => {
     const getAlbums = albums.map((album) => {
         const albumCover = album.image;
         const albumName = album.title;
@@ -17,11 +18,8 @@ const SelectSongPage = (props: Props) => {
         }
     })
   return (
-    <div>
-        <h1>ALBUMS</h1>
         <AllAlbums getAlbums={getAlbums}/>
-    </div>
   )
 }
 
-export default SelectSongPage
+export default SelectAlbumPage

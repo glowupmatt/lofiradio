@@ -3,6 +3,7 @@ import topSongs from './TopSongsComp.module.css'
 import { albums } from '@/app/music'
 import AlbumIcon from '@mui/icons-material/Album';
 import { grey } from '@mui/material/colors';
+import Image from 'next/image';
 
 type Props = {}
 
@@ -29,7 +30,11 @@ const TopSongsComp = (props: Props) => {
                     <div key={index} className={topSongs.songCardContainer}>
                         <div className={topSongs.songContainer}>
                             <div className={topSongs.songCover}>
-                                <img src={cover} alt={songName} />
+                                <Image
+                                src={cover} 
+                                alt={songName}
+                                width={1080}
+                                height={1920} />
                             </div>
                             <div className={topSongs.songInfo}>
                                 <h4 className={topSongs.songName}>{songName}</h4>

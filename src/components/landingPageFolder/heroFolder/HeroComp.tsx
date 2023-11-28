@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import HeroStyles from './HeroStyles.module.css'
 import EmblaCarousel from './EmblaCarousel'
 import { EmblaOptionsType } from 'embla-carousel-react'
-import Link from 'next/link'
+import { scrollToTop } from '@/utils/scrollToTop'
 import { DataContext } from '@/context/AppContext'
 
 type Props = {}
@@ -22,7 +22,7 @@ const HeroComp = (props: Props) => {
     setSelectedPage,
   } = useContext(DataContext);
   return (
-    <div onClick={() => setSelectedPage("albumPage")} className={HeroStyles.heroImageContainer}>
+    <div onClick={() => {setSelectedPage("albumPage"), scrollToTop()}} className={HeroStyles.heroImageContainer}>
       <div className={HeroStyles.heroTextContainer}>
         <h2 className={HeroStyles.headerText}>Top Albums</h2>
         <p className={HeroStyles.bodyText}>Discover your favorite Lofi album with out all new 

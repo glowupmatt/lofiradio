@@ -14,6 +14,13 @@
     justify-items: center;
 }
 
+@media screen and (min-width: 768px) {
+    .sectionContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
 .albumCover {
     min-height: 8rem;
     min-width: 8rem;
@@ -28,6 +35,27 @@
     display: flex;
     border-radius: 1rem;
     gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1020px) {
+    .albumCardContainer {
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .albumCardContainer:hover {
+        transform: scale(1.08);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .albumCover {
+        object-fit: cover;
+        width: 22rem; 
+        max-width: 100%;
+    }
 }
 
 .albumInfo {
@@ -36,6 +64,7 @@
     align-items: flex-start;
     gap: 0.31rem;
     padding: .5rem;
+    width: 100%;
 }
 
 .albumName {

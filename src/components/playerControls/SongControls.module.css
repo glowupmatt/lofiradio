@@ -1,0 +1,39 @@
+.controls {
+    max-height: 7.8125rem;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(29, 33, 35, 0.30);
+    backdrop-filter: blur(15px);
+}
+
+.coverArt {
+    width: 3.58813rem;
+    height: 3.58813rem;
+    border-radius: 10px;
+}
+
+.infoContainer {
+    display: flex;
+    padding: .5rem;
+    gap: 1rem;
+}
+
+.infoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.songName {
+    color: #FFF;
+font-size: 1.02519rem;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 1.23025rem */
+}
+
+.artist {
+    color: rgba(255, 255, 255, 0.44);
+font-size: 0.73225rem;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 0.87875rem */
+}

@@ -21,6 +21,14 @@
     height: var(--slide-height);
 
   }
+
+  @media screen and (min-width: 1020px) {
+    .embla__slide {
+      min-height: 33rem;
+      height: var(--slide-height);
+    }
+    
+  }
   .embla__slide__img {
     display: block;
     width: 100%;

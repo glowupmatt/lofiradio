@@ -1,6 +1,8 @@
 import React , { useContext } from "react";
 import { DataContext } from "@/context/AppContext";
 import albumsStyles from "./AllAlbums.module.css"
+import Image from "next/image";
+import { scrollToTop } from "@/utils/scrollToTop";
 
 type Props = {
     getAlbums: {
@@ -21,11 +23,14 @@ const AllAlbums = (props: Props) => {
                 onClick={() => 
                     {setSelectedAlbum(album.albumName)
                     setSelectedPage('songPage')
+                    scrollToTop()
                 }} 
                 className={albumsStyles.albumCard} 
                 key={index}>
                     <div className={albumsStyles.overlay}></div>
-                    <img 
+                    <Image
+                    width={1080}
+                    height={1920} 
                     src={album.cover} 
                     alt={album.albumName} 
                     className={albumsStyles.imageStyles}/>

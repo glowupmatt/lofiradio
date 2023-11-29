@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from "@/context/AppContext";
 import topSongs from './TopSongsComp.module.css'
 import { albums } from '@/app/music'
 import AlbumIcon from '@mui/icons-material/Album';
 import { grey } from '@mui/material/colors';
 import Image from 'next/image';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 type Props = {}
 
 const TopSongsComp = (props: Props) => {
+    const { setSelectedAlbum, setSelectedPage, setSelectedSong } = useContext(DataContext);
     const topFiveSongs = albums.map((album) => {
         const albumCover = album.image;
         const topSong = album.songs[1];
         const artist = album.artist;
+        const albumName = album.title;
         return {
             artist: artist,
+            albumName: albumName,
             songName: topSong.name,
             cover: albumCover,
+            topSong: topSong,
         }
     })
   return (
@@ -25,9 +31,17 @@ const TopSongsComp = (props: Props) => {
         </div>
         <div className={topSongs.sectionContainer}>
             {topFiveSongs.map((song, index) => {
-                const { cover, songName, artist } = song;
+                const { cover, songName, artist,albumName, topSong } = song;
                 return (
-                    <div key={index} className={topSongs.songCardContainer}>
+                    <div 
+                    key={index} 
+                    className={topSongs.songCardContainer}
+                    onClick={() => {
+                        setSelectedAlbum(albumName)
+                        setSelectedPage('songPage')
+                        setSelectedSong(topSong)
+                        scrollToTop()
+                        }}>
                         <div className={topSongs.songContainer}>
                             <div className={topSongs.songCover}>
                                 <Image

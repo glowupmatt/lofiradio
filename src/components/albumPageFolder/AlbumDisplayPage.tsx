@@ -25,9 +25,6 @@ const AlbumDisplayPage = (props: Props) => {
     const { selectedAlbumFilter } = props;
 
     const albumCover = selectedAlbumFilter[0].image;
-    const albumName = selectedAlbumFilter[0].title;
-    const artist = selectedAlbumFilter[0].artist;
-    const songs = selectedAlbumFilter[0].songs;
   return (
     <section className={SelectedAlbumStyles.mainContainer}>
             <div 

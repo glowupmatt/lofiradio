@@ -16,8 +16,10 @@ export default function Home() {
     selectedSong
   } = useContext(DataContext);
   const selectedAlbumFilter = albums.filter((album) => album.title === selectedAlbum)
+  const findAlbumThanHoldsSelectedSong = albums.filter((album) => album.songs.includes(selectedSong))
   return (
-    <HomePageBody selectedAlbumFilter={selectedAlbumFilter}>
+    <HomePageBody 
+    findAlbumThanHoldsSelectedSong={findAlbumThanHoldsSelectedSong}>
         {selectedPage === 'homePage' ? <LandingPage /> 
         : selectedPage === 'albumPage' ? <SelectAlbumPage />
         : selectedPage === 'songPage' ? <AlbumDisplayPage 

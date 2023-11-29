@@ -3,6 +3,7 @@ import { DataContext } from "@/context/AppContext";
 import { albums } from '@/app/music'
 import topSixAlbums from './TopSixAlbums.module.css'
 import Image from 'next/image'
+import { scrollToTop } from '@/utils/scrollToTop'
 
 type Props = {}
 
@@ -32,20 +33,22 @@ const TopSixAlbums = (props: Props) => {
                 <div 
                 key={index} 
                 className={topSixAlbums.albumCardContainer}
-                onClick={() => {setSelectedAlbum(albumName)
-                setSelectedPage('songPage')}}
+                onClick={() => {
+                setSelectedAlbum(albumName)
+                setSelectedPage('songPage')
+                scrollToTop()}}
                 >   
-                            <Image
-                            width={1080}
-                            height={1920} 
-                            src={cover} 
-                            alt={albumName} 
-                            className={topSixAlbums.albumCover}
-                            />
-                        <div className={topSixAlbums.albumInfo}>
-                            <h4 className={topSixAlbums.albumName}>{albumName}</h4>
-                            <h2 className={topSixAlbums.artistName}>{artist}</h2>
-                        </div>
+                    <Image
+                    width={1080}
+                    height={1920} 
+                    src={cover} 
+                    alt={albumName} 
+                    className={topSixAlbums.albumCover}
+                    />
+                    <div className={topSixAlbums.albumInfo}>
+                        <h4 className={topSixAlbums.albumName}>{albumName}</h4>
+                        <h2 className={topSixAlbums.artistName}>{artist}</h2>
+                    </div>
                 </div>
             )
         })}

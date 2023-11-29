@@ -10,21 +10,23 @@
 
 .infoContainer {
     display: flex;
-    padding: 0.5rem;
+    padding: 0 1rem;
     gap: 1rem;
     background: rgb(0, 0, 0);
     height: 13%;
     align-items: center;
+    justify-content: space-between;
 }
 
 .infoText {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .songName {
     color: #FFF;
-font-size: 1.02519rem;
+font-size: .9rem;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 1.23025rem */
@@ -36,4 +38,51 @@ font-size: 0.73225rem;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; /* 0.87875rem */
+}
+
+.controlsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 760px) {
+    .songName {
+        font-size: 1.23025rem;
+    }
+    .artist {
+        font-size: 0.87875rem;
+    }
+    .control {
+        width: 1.5rem;
+        height: 1.5rem;
+    
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .infoContainer {
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .controlsContainer{
+        width: auto;
+        justify-content: center;
+    }
+    
+    .infoText {
+        width: 100%;
+    }
+    
+    .infoContainer {
+        padding: 0 5rem;
+    }
+
+    .control {
+        width: 2.5rem;
+        height: 2.5rem;
+    
+    }
 }

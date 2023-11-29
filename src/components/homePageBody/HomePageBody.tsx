@@ -10,23 +10,23 @@ import MobileNav from './navBarFolder/MobileNav';
 
 type Props = {
   children: React.ReactNode;
-  selectedAlbumFilter: {
-    title: string;
-    artist: string;
-    image: string;
-    mainColor: string;
-    secondColor: string;
-    songs: {
-        name: string;
-        id: string;
-        credits: string;
-        audio: string;
-    }[];
+findAlbumThanHoldsSelectedSong: {
+  title: string;
+  artist: string;
+  image: string;
+  mainColor: string;
+  secondColor: string;
+  songs: {
+      name: string;
+      id: string;
+      credits: string;
+      audio: string;
+  }[];
 }[]
 }
 
 const HomePageBody = (props: Props) => {
-  const { children, selectedAlbumFilter } = props
+  const { children, findAlbumThanHoldsSelectedSong } = props
 
     const [navOpen, setNavOpen] = useState(false)
     const {
@@ -34,6 +34,7 @@ const HomePageBody = (props: Props) => {
       selectedAlbum,
       selectedSong
     } = useContext(DataContext);
+    
   return (
     <div className={childrenStyles.headerAndControlsContainer}>    
         <NavBar 
@@ -49,7 +50,7 @@ const HomePageBody = (props: Props) => {
             selectedSong.audio !== "" ?  {height: '81vh'} : {height: '100vh'}}
           >{children}</main>
         {selectedSong.audio !== "" ?  
-        <SongControls selectedAlbumFilter={selectedAlbumFilter} /> : null}
+        <SongControls findAlbumThanHoldsSelectedSong={findAlbumThanHoldsSelectedSong} /> : null}
     </div>
   )
 }

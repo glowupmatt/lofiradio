@@ -24,6 +24,8 @@ type AppContextType = {
     credits: string;
     audio: string;
 }>>
+isPlaying: boolean;
+setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
   };
 
 
@@ -38,6 +40,7 @@ const [selectedSong, setSelectedSong] = useState({
     credits: "",
     audio: ""
 })
+const [isPlaying, setIsPlaying] = useState(false)
 
 return (
     <DataContext.Provider
@@ -48,7 +51,9 @@ return (
             selectedAlbum,
             setSelectedAlbum,
             selectedSong,
-            setSelectedSong
+            setSelectedSong,
+            isPlaying, 
+            setIsPlaying
         } as AppContextType
       }
     >

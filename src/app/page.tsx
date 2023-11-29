@@ -17,16 +17,13 @@ export default function Home() {
   } = useContext(DataContext);
   const selectedAlbumFilter = albums.filter((album) => album.title === selectedAlbum)
   return (
-    <main>
     <HomePageBody selectedAlbumFilter={selectedAlbumFilter}>
-      <div className={bodyStyles.mainBodyStyle}>
         {selectedPage === 'homePage' ? <LandingPage /> 
         : selectedPage === 'albumPage' ? <SelectAlbumPage />
         : selectedPage === 'songPage' ? <AlbumDisplayPage 
         selectedAlbumFilter={selectedAlbumFilter}/>
         : <LandingPage />}
-      </div>
     </HomePageBody>
-   </main>
+
   )
 }

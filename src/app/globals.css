@@ -1,19 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(65 65 65);
+  color: white;
+  overflow: hidden;
+}
 main {
-  background: rgb(65 65 65);;
-  height: 100%;
+  background: rgb(47 47 47);
+  max-height: 100vh;
   position: relative;
 }
 @media screen and (min-width: 1020px) {
-
   ::-webkit-scrollbar {
     width: 5px;
   }

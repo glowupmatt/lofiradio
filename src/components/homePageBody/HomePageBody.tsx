@@ -6,6 +6,7 @@ import childrenStyles from './HomePageBody.module.css'
 import { useState } from 'react'
 import Image from 'next/image'
 import SongControls from "@/components/playerControls/SongControls";
+import MobileNav from './navBarFolder/MobileNav';
 
 type Props = {
   children: React.ReactNode;
@@ -26,10 +27,7 @@ type Props = {
 
 const HomePageBody = (props: Props) => {
   const { children, selectedAlbumFilter } = props
-  const menuIcons = [
-    {title: 'Home' ,icon: '/MusicPlayerAssests/HomeIcon.svg', link: '/'},
-    {title: 'Albums' ,icon: '/MusicPlayerAssests/MusicIcon.svg', link: '/'},
-  ]
+
     const [navOpen, setNavOpen] = useState(false)
     const {
       selectedPage,
@@ -42,30 +40,14 @@ const HomePageBody = (props: Props) => {
         navOpen={navOpen}
         setNavOpen={setNavOpen}
         />
-        <div className={navOpen ? childrenStyles.navOpen : childrenStyles.navClosed}>
-          {menuIcons.map((icon) => {
-            return (
-              <div 
-                key={icon.title} 
-                className={childrenStyles.iconContainer}>
-                <Image 
-                width={100}
-                height={100}
-                  src={icon.icon} 
-                  alt={icon.title} 
-                  className={childrenStyles.icon}/>
-                <p>{icon.title}</p>
-              </div>
-            )
-          })}
-        </div>
-        <div 
+       <MobileNav navOpen={navOpen}/>
+        <main 
         className={navOpen 
           ? childrenStyles.mainBodyOpen 
           : childrenStyles.mainBody}
           style={
             selectedSong.audio !== "" ?  {height: '81vh'} : {height: '100vh'}}
-          >{children}</div>
+          >{children}</main>
         {selectedSong.audio !== "" ?  
         <SongControls selectedAlbumFilter={selectedAlbumFilter} /> : null}
     </div>

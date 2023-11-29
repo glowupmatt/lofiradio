@@ -1,8 +1,5 @@
 .controls {
-    max-height: 7.8125rem;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    background: rgba(29, 33, 35, 0.30);
-    backdrop-filter: blur(15px);
+    background: rgb(0, 0, 0);
 }
 
 .coverArt {
@@ -13,8 +10,11 @@
 
 .infoContainer {
     display: flex;
-    padding: .5rem;
+    padding: 0.5rem;
     gap: 1rem;
+    background: rgb(0, 0, 0);
+    height: 13%;
+    align-items: center;
 }
 
 .infoText {

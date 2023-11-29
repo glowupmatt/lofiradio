@@ -1,8 +1,7 @@
 .navOpen {
     overflow: hidden;
     position: absolute;
-    background: rgba(157, 157, 157, 0.507);
-    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.507);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.4px);
     -webkit-backdrop-filter: blur(10.4px);
@@ -10,6 +9,7 @@
     height: 90%;
     z-index: 10000;
     color: white;
+    bottom: 0;
 }
 
 
@@ -26,12 +26,12 @@
     overflow: overlay;
 }
 
+
 @media screen and (min-width: 1020px) {
     .mainBodyOpen{
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
         height: 100%;
     }
 
@@ -39,8 +39,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
         height: 100%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .mainBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         min-height: 90vh;
+    }
+    .mainBodyOpen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         min-height: 90vh;
     }
 }
 
@@ -66,4 +80,15 @@
     line-height: 120%;
     padding: 2rem 1rem;
     color: white;
+}
+
+
+.headerAndControlsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    background: transparent;
+    height: 100vh;
+    max-width: 2560px;
 }

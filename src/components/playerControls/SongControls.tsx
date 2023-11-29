@@ -27,7 +27,6 @@ const SongControls = (props: Props) => {
   const {image, title, artist} = selectedAlbumFilter[0]
   const {name, credits, audio, id} = selectedSong
   return (
-    <section className={controlStyles.controls}>
       <div className={controlStyles.infoContainer}>
         <Image 
         src={image} 
@@ -40,7 +39,6 @@ const SongControls = (props: Props) => {
           <p className={controlStyles.artist}>{artist}</p>
         </div>
       </div>
-    </section>
   )
 }
 

@@ -14,21 +14,22 @@
     justify-items: center;
 }
 
-@media screen and (min-width: 768px) {
-    .sectionContainer {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-}
 
 .albumCover {
     min-height: 8rem;
     min-width: 8rem;
-    width: 90%;
+    width: 100%;
     max-width: 15rem;
-    max-height: 15rem;
+    height: 100%;
     object-fit: fill;
     border-radius: 1.5rem;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .sectionContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .albumCardContainer {
@@ -56,6 +57,13 @@
         width: 22rem; 
         max-width: 100%;
     }
+}
+
+@media screen and (min-width: 1440px) {
+    .albumCover {
+        width: 30rem;
+    }
+    
 }
 
 .albumInfo {

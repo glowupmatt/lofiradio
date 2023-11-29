@@ -29,7 +29,7 @@ const AlbumDisplayPage = (props: Props) => {
     const artist = selectedAlbumFilter[0].artist;
     const songs = selectedAlbumFilter[0].songs;
   return (
-    <main className={SelectedAlbumStyles.mainContainer}>
+    <section className={SelectedAlbumStyles.mainContainer}>
             <div 
             className={SelectedAlbumStyles.selectedAlbumMain} 
             style={{  
@@ -39,7 +39,7 @@ const AlbumDisplayPage = (props: Props) => {
             }}>
                 <SelectedAlbum selectedAlbumFilter={selectedAlbumFilter}/>
             </div>
-    </main>
+    </section>
   )
 }
 

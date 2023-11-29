@@ -34,7 +34,8 @@ const TopSongsComp = (props: Props) => {
                                 src={cover} 
                                 alt={songName}
                                 width={1080}
-                                height={1920} />
+                                height={1920} 
+                                className={topSongs.songCover}/>
                             </div>
                             <div className={topSongs.songInfo}>
                                 <h4 className={topSongs.songName}>{songName}</h4>

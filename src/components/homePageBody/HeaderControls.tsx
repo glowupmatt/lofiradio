@@ -15,7 +15,7 @@ type Props = {
         icon: string;
         link: string;
     }[];
-    selectedAlbumFilter: {
+    findAlbumThanHoldsSelectedSong: {
         title: string;
         artist: string;
         image: string;
@@ -31,7 +31,7 @@ type Props = {
 }
 
 const HeaderControls = (props: Props) => {
-    const { navOpen, setNavOpen, menuIcons, selectedAlbumFilter } = props
+    const { navOpen, setNavOpen, menuIcons, findAlbumThanHoldsSelectedSong } = props
     const {
       selectedPage,
       selectedAlbum,
@@ -61,7 +61,7 @@ const HeaderControls = (props: Props) => {
       })}
     </div>
     {selectedSong.audio !== "" ?  
-        <SongControls selectedAlbumFilter={selectedAlbumFilter} /> : null}
+        <SongControls findAlbumThanHoldsSelectedSong={findAlbumThanHoldsSelectedSong} /> : null}
     </div>
   )
 }

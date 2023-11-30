@@ -45,3 +45,41 @@ main {
 }
 
 
+input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #616161;
+  border-radius: 10px;
+  height: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 15px;
+  width: 23px;
+  border-radius: 23px;
+  box-shadow: 1px 1px 1px #000000;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: #616161;
+  border-radius: 10px;
+  height: 15px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 23px;
+  border-radius: 23px;
+  box-shadow: 1px 1px 1px #000000;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+

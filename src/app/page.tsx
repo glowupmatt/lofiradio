@@ -13,10 +13,24 @@ export default function Home() {
   const {
     selectedPage,
     selectedAlbum,
-    selectedSong
+    selectedSong,
+    isPlaying,
+    setSongId,
+    songId,
+    setSongIndex,
+    songIndex,
+    setSelectedSongsArray,
+    selectedSongsArray
   } = useContext(DataContext);
-  const selectedAlbumFilter = albums.filter((album) => album.title === selectedAlbum)
-  const findAlbumThanHoldsSelectedSong = albums.filter((album) => album.songs.includes(selectedSong))
+  const selectedAlbumFilter = albums.filter((album) => album.title === selectedAlbum);
+  const findAlbumThanHoldsSelectedSong = albums.filter((album) => album.songs.includes(selectedSong));
+  //get the song id into a state
+  setSongId(selectedSong.id);
+  //get the index of the song from the array
+  setSelectedSongsArray(findAlbumThanHoldsSelectedSong[0]?.songs);
+  const selectedSongIndex = selectedSongsArray?.findIndex((song) => song.id === songId);
+  setSongIndex(selectedSongIndex);
+ 
   return (
     <HomePageBody 
     findAlbumThanHoldsSelectedSong={findAlbumThanHoldsSelectedSong}>

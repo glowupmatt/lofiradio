@@ -26,6 +26,22 @@ type AppContextType = {
 }>>
 isPlaying: boolean;
 setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
+setSongId: React.Dispatch<React.SetStateAction<string>>;
+songId: string;
+songIndex: number;
+setSongIndex: React.Dispatch<React.SetStateAction<number>>;
+selectedSongsArray: {
+  name: string;
+  id: string;
+  credits: string;
+  audio: string;
+}[];
+setSelectedSongsArray: React.Dispatch<React.SetStateAction<{
+  name: string;
+  id: string;
+  credits: string;
+  audio: string;
+}[]>>
   };
 
 
@@ -34,6 +50,8 @@ export const DataContext = createContext({} as AppContextType);
 export default function AppContext({ children }: Props) {
 const [selectedPage, setSelectedPage] = useState('homePage')
 const [selectedAlbum, setSelectedAlbum] = useState("")
+const [songId, setSongId] = useState("")
+const [songIndex, setSongIndex] = useState(0)
 const [selectedSong, setSelectedSong] = useState({
     name: "",
     id: "",
@@ -41,6 +59,12 @@ const [selectedSong, setSelectedSong] = useState({
     audio: ""
 })
 const [isPlaying, setIsPlaying] = useState(false)
+const [selectedSongsArray, setSelectedSongsArray] = useState([{
+  name: "",
+  id: "",
+  credits: "",
+  audio: ""
+}])
 
 return (
     <DataContext.Provider
@@ -53,7 +77,13 @@ return (
             selectedSong,
             setSelectedSong,
             isPlaying, 
-            setIsPlaying
+            setIsPlaying,
+            songId,
+            setSongId,
+            songIndex,
+            setSongIndex,
+            selectedSongsArray,
+            setSelectedSongsArray
         } as AppContextType
       }
     >

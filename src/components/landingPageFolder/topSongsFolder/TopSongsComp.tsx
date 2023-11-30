@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+'use client'
+import React, { useContext, useRef } from 'react'
 import { DataContext } from "@/context/AppContext";
 import topSongs from './TopSongsComp.module.css'
 import { albums } from '@/app/music'
@@ -10,7 +11,12 @@ import { scrollToTop } from '@/utils/scrollToTop';
 type Props = {}
 
 const TopSongsComp = (props: Props) => {
-    const { setSelectedAlbum, setSelectedPage, setSelectedSong } = useContext(DataContext);
+    const { 
+        setSelectedAlbum, 
+        setSelectedPage, 
+        setSelectedSong, 
+        isPlaying,
+        setIsPlaying} = useContext(DataContext);
     const topFiveSongs = albums.map((album) => {
         const albumCover = album.image;
         const topSong = album.songs[1];

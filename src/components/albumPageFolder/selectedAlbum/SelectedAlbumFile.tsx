@@ -45,7 +45,10 @@ const SelectedAlbumFile = (props: Props) => {
         <div className={SelectedAlbumStyles.songsContainer}>
           {songs.map((song, index) => {
             return (
-             <SongSelectionList song={song} key={index}/>
+             <SongSelectionList 
+             song={song} 
+             key={index} 
+             selectedAlbumFilter={selectedAlbumFilter}/>
             )
           })}
         </div>

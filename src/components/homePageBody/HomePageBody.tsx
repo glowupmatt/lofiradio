@@ -30,8 +30,6 @@ const HomePageBody = (props: Props) => {
 
     const [navOpen, setNavOpen] = useState(false)
     const {
-      selectedPage,
-      selectedAlbum,
       selectedSong
     } = useContext(DataContext);
     

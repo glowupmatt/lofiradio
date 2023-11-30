@@ -11,6 +11,15 @@
     background: rgb(0, 0, 0);
 }
 
+.control {
+    cursor: pointer;
+}
+
+.control:hover {
+    transform: scale(1.1);
+    color: rgb(181, 181, 181);
+}
+
 .coverArt {
     width: 3.58813rem;
     height: 3.58813rem;
@@ -82,6 +91,9 @@ line-height: 120%; /* 0.87875rem */
     .control {
         width: 1.5rem;
         height: 1.5rem;
+    }
+    .songDetails{
+        width: 36rem;
     }
 }
 

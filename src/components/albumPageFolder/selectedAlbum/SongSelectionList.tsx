@@ -27,6 +27,9 @@ type Props = {
             audio: string;
         }[];
     }[]
+    index: number;
+    selectedIndex: number
+    setSelectedIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 const SongSelectionList = (props: Props) => {
@@ -34,12 +37,11 @@ const SongSelectionList = (props: Props) => {
         selectedSong, 
         setIsPlaying, 
         isPlaying, 
-        playSongHandler,
-        
+        playSongHandler,   
     } = useContext(DataContext);
-    const { song, selectedAlbumFilter} = props;
+    const { song, selectedAlbumFilter, index, selectedIndex, setSelectedIndex} = props;
     const selectedSoloSong = selectedAlbumFilter[0].songs.filter((song) => song.id === selectedSong.id )
-    
+
   return (
     <div 
     className={selectedSoloSong[0]?.id === song.id
@@ -48,8 +50,10 @@ const SongSelectionList = (props: Props) => {
     key={song.id}
     onClick={() => {
         setSelectedSong(song)
-        setIsPlaying(true)
-        playSongHandler()}}>
+        selectedIndex === index ? setIsPlaying((prev) => !prev) :  setIsPlaying(true)
+        playSongHandler()
+        setSelectedIndex(index)
+        }}>
         {selectedSoloSong[0]?.id === song.id && isPlaying ? <Pause sx={{color: "white"}}/>  : <PlayCircleFilledIcon sx={{color: "white"}}/>}
         <div className={SongSelectionListStyles.songInfoContainer}>
             <p className={SongSelectionListStyles.songName}>{song.name}</p>

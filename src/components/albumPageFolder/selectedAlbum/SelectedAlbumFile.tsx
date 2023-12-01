@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, {useState} from 'react'
 import Image from 'next/image'
 import SelectedAlbumStyles from '@/components/albumPageFolder/selectedAlbum/SelectedAlbumFile.module.css'
 import SongSelectionList from './SongSelectionList';
@@ -26,6 +28,7 @@ const SelectedAlbumFile = (props: Props) => {
   const albumName = selectedAlbumFilter[0].title;
   const artist = selectedAlbumFilter[0].artist;
   const songs = selectedAlbumFilter[0].songs;
+  const [selectedIndex, setSelectedIndex] = useState(Infinity)
   return (
     <section className={SelectedAlbumStyles.sectionContainer}>
       <div className={SelectedAlbumStyles.imageTitleContainer}>
@@ -48,6 +51,9 @@ const SelectedAlbumFile = (props: Props) => {
              <SongSelectionList 
              song={song} 
              key={index} 
+             index={index}
+             selectedIndex={selectedIndex}
+             setSelectedIndex={setSelectedIndex}
              selectedAlbumFilter={selectedAlbumFilter}/>
             )
           })}

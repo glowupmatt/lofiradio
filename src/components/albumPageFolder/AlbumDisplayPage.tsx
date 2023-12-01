@@ -1,4 +1,4 @@
-import HomePageBody from '@/components/homePageBody/HomePageBody'
+'use client'
 import React, { useContext } from "react";
 import { DataContext } from "@/context/AppContext";
 import { albums } from '@/app/music'

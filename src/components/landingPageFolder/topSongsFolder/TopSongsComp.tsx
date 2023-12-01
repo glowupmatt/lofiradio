@@ -1,12 +1,12 @@
 'use client'
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { DataContext } from "@/context/AppContext";
 import topSongs from './TopSongsComp.module.css'
 import { albums } from '@/app/music'
 import AlbumIcon from '@mui/icons-material/Album';
 import { grey } from '@mui/material/colors';
 import Image from 'next/image';
-import { scrollToTop } from '@/utils/scrollToTop';
+
 
 type Props = {}
 
@@ -15,8 +15,10 @@ const TopSongsComp = (props: Props) => {
         setSelectedAlbum, 
         setSelectedPage, 
         setSelectedSong, 
-        isPlaying,
-        setIsPlaying} = useContext(DataContext);
+        setIsPlaying,
+        playSongHandler,
+
+        } = useContext(DataContext);
     const topFiveSongs = albums.map((album) => {
         const albumCover = album.image;
         const topSong = album.songs[1];
@@ -30,6 +32,8 @@ const TopSongsComp = (props: Props) => {
             topSong: topSong,
         }
     })
+
+
   return (
     <section>
         <div>
@@ -46,7 +50,8 @@ const TopSongsComp = (props: Props) => {
                         setSelectedAlbum(albumName)
                         setSelectedPage('songPage')
                         setSelectedSong(topSong)
-                        scrollToTop()
+                        setIsPlaying(true)
+                        playSongHandler()
                         }}>
                         <div className={topSongs.songContainer}>
                             <div className={topSongs.songCover}>
@@ -57,6 +62,7 @@ const TopSongsComp = (props: Props) => {
                                 height={1920} 
                                 className={topSongs.songCover}/>
                             </div>
+                
                             <div className={topSongs.songInfo}>
                                 <h4 className={topSongs.songName}>{songName}</h4>
                                 <h2 className={topSongs.artistName}>{artist}</h2>

@@ -4,7 +4,6 @@ import { DataContext } from '@/context/AppContext';
 import NavBar from './navBarFolder/NavBar'
 import childrenStyles from './HomePageBody.module.css'
 import { useState } from 'react'
-import Image from 'next/image'
 import SongControls from "@/components/playerControls/SongControls";
 import MobileNav from './navBarFolder/MobileNav';
 

@@ -94,7 +94,7 @@ line-height: 120%; /* 0.87875rem */
         width: 2rem;
     }
     .songDetails{
-        width: auto;
+        width: 15rem;
     }
 }
 
@@ -106,7 +106,7 @@ line-height: 120%; /* 0.87875rem */
         align-items: center;
         gap: 5rem;
     }
-    
+   
     .controlsContainer{
         width: auto;
         justify-content: center;
@@ -135,6 +135,10 @@ line-height: 120%; /* 0.87875rem */
     .audioSlider {
         display: block;
         width: 10rem;
+    }
+
+    .infoText {
+        width: 15rem;
     }
 
    .audioControls {

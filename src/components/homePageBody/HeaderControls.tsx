@@ -33,10 +33,9 @@ type Props = {
 const HeaderControls = (props: Props) => {
     const { navOpen, setNavOpen, menuIcons, findAlbumThanHoldsSelectedSong } = props
     const {
-      selectedPage,
-      selectedAlbum,
       selectedSong
     } = useContext(DataContext);
+
   return (
     <div className={childrenStyles.headerAndControlsContainer}>  
     <NavBar 
@@ -48,7 +47,8 @@ const HeaderControls = (props: Props) => {
         return (
           <div 
             key={icon.title} 
-            className={childrenStyles.iconContainer}>
+            className={childrenStyles.iconContainer}
+            >
             <Image 
             width={100}
             height={100}

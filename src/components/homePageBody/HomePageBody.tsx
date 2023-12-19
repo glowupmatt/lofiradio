@@ -38,7 +38,7 @@ const HomePageBody = (props: Props) => {
         navOpen={navOpen}
         setNavOpen={setNavOpen}
         />
-       <MobileNav navOpen={navOpen}/>
+       <MobileNav navOpen={navOpen} setNavOpen={setNavOpen}/>
         <main 
         className={navOpen 
           ? childrenStyles.mainBodyOpen 

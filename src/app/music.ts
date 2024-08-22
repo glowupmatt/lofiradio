@@ -4,7 +4,7 @@ export const albums = [
   {
     title: 'Inside a Saltwater Room',
     artist: 'Delayde, anybodyy',
-    image: 'https://chillhop.com/wp-content/uploads/2021/09/6a9ef8ac00e168d3308fdf9e336874c03fab829d-1024x1024.jpg',
+    image: '/lofiradio-images/inside-saltwater.jpeg',
     mainColor: '#A7DDF5',
     secondColor: '#7B4DCD',
     songs: [
@@ -67,7 +67,7 @@ export const albums = [
   {
     title: 'Passing Notes',
     artist: 'Middle School',
-    image: 'https://chillhop.com/wp-content/uploads/2021/07/5821e04fd52fa668a0b9890f213cbb12e454cc6b-1024x1024.jpg',
+    image: '/lofiradio-images/passing-notes.jpeg',
     mainColor: '#ED5F34',
     secondColor: '#213C52',
     songs:[
@@ -124,7 +124,7 @@ export const albums = [
   {
   title: 'Wanderlust',
   artist: 'Makzo',
-  image:'https://chillhop.com/wp-content/uploads/2021/06/23b2ff959731b56ea8545828b462311e8b1a2bcc-1024x1024.jpg',
+  image:'/lofiradio-images/wanderlust.jpeg',
   mainColor:'#BA9CD3',
   secondColor:'#1153B6',
   songs:[
@@ -193,7 +193,7 @@ export const albums = [
   {
     title: 'Aftersome',
     artist: 'Toonorth',
-    image: 'https://chillhop.com/wp-content/uploads/2021/05/732128e1da8fd5f6292ffc1926a2ea840a54f4d0-1024x1024.jpg',
+    image: '/lofiradio-images/aftersome.jpeg',
     mainColor: '#FDA61E',
    secondColor: '#374C69',
     songs:[
@@ -274,7 +274,7 @@ export const albums = [
   {
     title: 'Into The Past',
     artist: 'C Y G N',
-    image: 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
+    image: '/lofiradio-images/into-past.jpeg',
     mainColor: '#7699D2',
     secondColor: '#4B3462',
     songs: [
@@ -349,7 +349,7 @@ export const albums = [
   {
   title: 'Forest Lore',
   artist: 'Aarigod',
-  image: 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
+  image: '/lofiradio-images/forest-lore.jpeg',
   mainColor: '#63BE6E',
   secondColor:'#363223',
   songs:[
@@ -418,7 +418,7 @@ export const albums = [
    {
     title: 'Anecdotes',
     artist: 'Makzo',
-    image: 'https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8-1024x1024.jpg',
+    image: '/lofiradio-images/anecdotes.jpeg',
     mainColor: '#F9C25D',
     secondColor: '#28569D',
     songs:[
@@ -463,7 +463,7 @@ export const albums = [
   {
     title: 'Hologramophone',
     artist: 'Aviino',
-    image: 'https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg',
+    image: '/lofiradio-images/hologramophone.jpeg',
     mainColor: '#F178BA',
     secondColor: '#4583C7',
     songs: [

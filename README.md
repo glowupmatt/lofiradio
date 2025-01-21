@@ -16,4 +16,4 @@ The Lofi Radio App was created to allow users access to lofi albums using a medi
 
 ## Demo
 
-https://lofiradio-ecru.vercel.app/)https://lofiradio-ecru.vercel.app/
+https://lofiradio-ecru.vercel.app/
